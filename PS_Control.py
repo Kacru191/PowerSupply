@@ -283,8 +283,7 @@ while (1):
 
 				print "\n...Intialization complete...\n" 
 				flag1 = 1
-	#else:
-		#print "Initializaton not complete...\n\n\n"
+
 #################################################
 ################################################
 	##button_state2 = get_bool("\nTrue2 or False2\n")
@@ -329,12 +328,6 @@ while (1):
 			flag2 = 1
 
 			print "\n!!!Power on Successful!!!\n" 
-	#else:
-		#GPIO.output(EN_Pins["ZPI_EN"],GPIO.LOW)
-		#PINSTATE_C -= GP_3
-		#Change_PinState(PE2,GPB,PINSTATE_C)
-		#PINSTATE_C -= GP_1
-		#Change_PinState(PE2,GPB,PINSTATE_C)
 
 ############################################
 	#button_state3 = get_bool("\nTrue3 or False3\n")
@@ -377,12 +370,6 @@ while (1):
 
 			flag3 =1
 
-	#else:
-		#GPIO.output(EN_Pins["VPT_EN"],GPIO.LOW)
-		#GPIO.output(EN_Pins["VUSB_EN"],GPIO.LOW)
-		#PINSTATE_A -= GP_5
-		#Change_PinState(PE1,GPA,PINSTATE_A)
-		#print "???Powered OFF???" 
 ###########################################
 	#button_state4 = get_bool("\nTrue4 or False4\n")
 
@@ -426,12 +413,6 @@ while (1):
 			print "\n!!!Power on Successful!!!\n" 
 			
 			flag4 =1 
-	#else:
-		#GPIO.output(EN_Pins["DPI_EN"],GPIO.LOW)
-		#PINSTATE_B -= GP_4
-		#Change_PinState(PE1,GPB,PINSTATE_B)
-		#PINSTATE_B -= GP_0
-		#Change_PinState(PE1,GPB,PINSTATE_B)
 		
 ########################################
 	#button_state5 = get_bool("\nTrue5 or False5\n")
@@ -467,12 +448,7 @@ while (1):
 
 			print "\n!!!Power on Successful!!!\n" 
 			flag5 = 1
-	#else:
-		#PINSTATE_A -= GP_7
-		#Change_PinState(PE1,GPA,PINSTATE_A)
-		#PINSTATE_B -= GP_6
-		#Change_PinState(PE1,GPB,PINSTATE_B)
-		#print "\n???Powered OFF???\n" 
+
 #########################################
 ########################################
 
