@@ -1,0 +1,17 @@
+import sys
+import RPi.GPIO as GPIO #initialize GPIOs on RPi
+import time
+import smbus
+
+
+bus = smbus.SMBus(1)
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+
+ADDR = 0x33 
+
+
+sudo i2cdetect -y 0
+byte1 = bus.read_byte(ADDR)
+print str(byte1) 
+
