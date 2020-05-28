@@ -20,7 +20,7 @@ GPIO.setwarnings(False)
 # which will return the pin number as an integer
 
 
-ADDR = 0x33		# Address of ADC
+ADDR = 0x	49	# Address of ADC
 SETUP = 0x80		# Setup bytes [REG][SEL2][SEL1][SEL0][CLK][BIP/UNI][RST][X]
 					#
 CONFIG = 0xf0 	# Config bytes [REG][SCAN1][SCAN0][CS3][CS2][CS1][CS0][SGL/DIF]
