@@ -14,8 +14,18 @@ ads = ADS.ADS1115(tca[2])
 
 try:
 	while 1:
+		print("LIDAR1\n")
 		chan = AnalogIn(ads,ADS.P0)
-		print("Channel 1:", chan.value, " ", chan.voltage, "V\n")
+		volt = chan.voltage
+		convert = volt*8.38402
+		print("Voltage:", " ", convert, "V, ")
+
+
+		chan = AnalogIn(ads,ADS.P1)
+		volt1 = chan.voltage
+		convert1 = volt/1.568
+		print("Current:", convert1,"A\n")
+
 		time.sleep(2)
 except KeyboardInterrupt:
 	print("Stopped")
