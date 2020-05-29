@@ -14,20 +14,22 @@ ads = ADS.ADS1115(tca[2])
 
 try:
 	while 1:
-#		print("LIDAR1\n")
-		print("Nvidia TX2")
+		print("LIDAR1\n")
+#		print("Nvidia TX2")
 		chan = AnalogIn(ads,ADS.P0)
 		volt = chan.voltage
-		#convert = volt*8.38402 ##Conversion for 28V
-		convert = volt*4.508
+		convert = volt*8.3856 ##Conversion for 28V
+		#convert = volt*4.508
+#		print("before conversion:", volt, " ")
 		print("Voltage:", " ", convert, "V, ")
 
 
 		chan = AnalogIn(ads,ADS.P1)
 		volt1 = chan.voltage
-		#convert1 = volt1/1.568  ##Conversion for 28V
-		convert1 = volt1/0.201
-		print("Current:", volt1, convert1,"A\n")
+		convert1 = volt1/1.5  ##Conversion for 28V
+		#convert1 = volt1/0.728
+#		print("before conversion:", volt1," ")
+		print("Current:", convert1,"A\n")
 
 		time.sleep(2)
 except KeyboardInterrupt:
